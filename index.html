@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>My portfolio</h1>
+						<p>A showcase of my portfolio and abilities</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Massively</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">This is Massively</a></li>
+							
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/md3629"><i class="icon brands fa-linkedin"></i><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://www.credly.com/badges/8151d4cb-0149-47bc-8891-34088b6acfe6/public_url"><i class="icon brands fa-credly"></i><span class="label">MCSE</span></a></li>
+							<li><a href="https://www.credly.com/badges/a7670d32-4716-423f-891e-667d6106aaa8/public_url"><i class="icon brands fa-credly"></i><span class="label">MCSA</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+				n
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h2><a href="#">My name is Marian Delibas</h2>
+									<p>With over ten years of experience in finance, business analysis, BI, data engineering, and data science, I leverage my data skills to provide insights and recommendations that support strategic decision-making and drive business performance. I have expertise in various tools and languages, such as Power BI, Power Query, SSAS, R, DAX, and SQL, to build self-service and enterprise-scale data solutions. I also have experience in working with different ERP, SaaS, and RDBMS platforms, such as Sage, Microsoft Dynamics, Azure, NetSuite, Teradata, and Oracle. I am passionate about delivering value to my clients and stakeholders by transforming data into actionable insights</p>
+								</header>
+								<a href="#" class="image main"><img src="images/p1.jpg" alt="" /></a>
+								<ul class="actions special">
+									<li><a href="#" class="button large">Check it out</a></li>
+								</ul>
+							</article>
+
+						<!-- Posts -->
+							<section class="posts">
+
+								<article>
+									<header>
+
+										<h2>
+											<a href="#">
+												DAX measures<br />
+												Power BI, Excel
+											</a>
+										</h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/p3.jpg" alt="" /></a>
+									<p>
+										Calculated measures are the way of defining calculations in a DAX model, which allows us to calculate values based on each row.<br />
+										Here is a "Calculated Rolling Total" to show the balance over time (see Marco Russo & Alberto Ferrari)<br />
+										<br />
+										Trade Amount RT =<br />
+										VAR LastVisibleDate = MAX ( Transactions[Date] )<br />
+										VAR FirstVisibleDate = MIN ( Transactions[Date] )<br />
+										VAR LastDateWithSales =<br />
+										CALCULATE (<br />
+										MAX ( Transactions[Date] ),
+										ALL ( Transactions ) <br />
+										)<br />
+										VAR Result = IF (<br />
+										FirstVisibleDate <= LastDateWithSales,
+										CALCULATE ( [Total Net Amount], Calendar_Transactions[Date] <= LastVisibleDate )<br />
+										)<br />
+										RETURN<br />
+										Result <br />
+
+									</p>
+
+								</article>
+								<article>
+									<header>
+
+										<h2>
+											<a href="#">
+												Anomaly detection<br />
+												Power BI
+											</a>
+										</h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/p4.jpg" alt="" /></a>
+									<p>Anomaly detection helps us enhance our line charts by automatically detecting anomalies in your time series data. It also provides explanations for the anomalies to help with root cause analysis.</p>
+
+								</article>
+								<article>
+									<header>
+
+										<h2>
+											<a href="#">
+												M language<br />
+												Power BI, Excel Power Query
+											</a>
+										</h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/M_language.jpg" alt="" /></a>
+									<p>
+										M is a functional, case-sensitive mashup language designed for data transformation.<br />
+										Here is an example of data cleaning and transformation for handling analysis of sale orders.
+									</p>
+
+								</article>
+								<article>
+									<header>
+
+										<h2><a href="#">Excel CUBE-Functions and MDX UniqueNames</h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/CUBE.jpg" alt="" /></a>
+									<p>Excel Cube Functions, that allow us to pull data into a worksheet using functions like other Excel functions, can be placed anywhere and preserve a standard Excel report. When we are using Power Pivot in Excel, we can build an MDX query using CUBE functions..</p>
+
+								</article>
+								<article>
+									<header>
+
+										<h2>
+											<a href="#">
+												Sales Orders analysis<br />
+												DAX, M
+											</a>
+										</h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/SO.jpg" alt="" /></a>
+									<p>Long-term sales orders have a duration that typically spans multiple years, which means that we cannot simply compare the sales order amount and the total amount invoiced so far. A visual created in Excel Power Query based on M language and DAX measures can solve this complex problem..</p>
+
+								</article>
+								<article>
+									<header>
+
+										<h2>
+											<a href="#">
+												Sales Orders analysis<br />
+												Backlog days
+											</a>
+										</h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/AvDays.jpg" alt="" /></a>
+									<p>Long-term sales orders have a duration that typically spans multiple years, which means that we cannot simply compare the sales order amount and the total amount invoiced so far. A visual created in Excel Power Query based on M language and DAX measures can solve this complex problem..</p>
+
+								</article>
+
+								<article>
+									<header>
+
+										<h2>
+											<a href="#">
+												Web Scraping by using a function in M<br />
+												Var 1 - M language
+											</a>
+										</h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/webscraping.jpg" alt="" /></a>
+									<p>Web scraping is an automatic method to obtain large amounts of data from websites. Most of this data is unstructured data in an HTML format which is then converted into structured data in a spreadsheet or a database so that it can be used in various applications. There are many different ways to perform web scraping to obtain data from websites. Here is an example in M where data is a table and we wanted to load multiple pages by using a function </p>
+									<ul class="actions special">
+										<li><a href="https://github.com/md3629/web-scraping.git" class="button large">Check it out</a></li>
+									</ul>
+								</article>
+
+							</section>
+
+						<!-- Footer -->
+							<footer>
+								
+							</footer>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section class="split contact">
+							
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(0044) 07931-732780</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">mariandelibas@yahoo.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/md3629"><i class="icon brands alt fa-linkedin"></i><span class="label">LinkedIn</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

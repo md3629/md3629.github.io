@@ -49,269 +49,279 @@
 					<div id="main">
 
 						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="#">My name is Marian Delibaş</h2>
-									<img class="cr-badges-full-badge__img" src="https://images.credly.com/size/680x680/images/34e2e27c-ed4d-488a-80bd-03da0dcf7e4d/MCSE-Data_Management_and_Analytics.png" alt="MCSE: Data Management and Analytics — Certified 2020 badge image. Issued by Microsoft" width="100" height="100">
-									<img class="cr-badges-full-badge__img" src="https://images.credly.com/size/680x680/images/04ec6fa0-ee37-48f5-b28d-ac1f8a467be8/MCSA-BI-Reporting-2019.png" alt="MCSA: BI Reporting - Certified 2019 badge image. Issued by Microsoft" width="100" height="100">
-									<img class="cr-badges-full-badge__img" src="https://images.credly.com/size/680x680/images/b01120f3-1b27-405d-b64d-da1a2a7eca33/MTA-Database-Fundamentals-2018.png" alt="MTA: Database Fundamentals - Certified 2018 badge image. Issued by Microsoft" width="100" height="100">
-									<p>With over ten years of experience in finance, business analysis, BI, data engineering, and data science, I leverage my data skills to provide insights and recommendations that support strategic decision-making and drive business performance. I have expertise in various tools and languages, such as Power BI, Power Query, SSAS, R, DAX, MDX, and SQL, to build self-service and enterprise-scale data solutions. I also have experience in working with different ERP, SaaS, and RDBMS platforms, such as Sage, Microsoft Dynamics, Azure, NetSuite, Teradata, and Oracle. I am passionate about delivering value to my clients and stakeholders by transforming data into actionable insights</p>
+						<article class="post featured">
+							<header class="major">
+								<h2><a href="#">My name is Marian Delibaş</h2>
+								<img class="cr-badges-full-badge__img" src="https://images.credly.com/size/680x680/images/34e2e27c-ed4d-488a-80bd-03da0dcf7e4d/MCSE-Data_Management_and_Analytics.png" alt="MCSE: Data Management and Analytics — Certified 2020 badge image. Issued by Microsoft" width="100" height="100">
+								<img class="cr-badges-full-badge__img" src="https://images.credly.com/size/680x680/images/04ec6fa0-ee37-48f5-b28d-ac1f8a467be8/MCSA-BI-Reporting-2019.png" alt="MCSA: BI Reporting - Certified 2019 badge image. Issued by Microsoft" width="100" height="100">
+								<img class="cr-badges-full-badge__img" src="https://images.credly.com/size/680x680/images/b01120f3-1b27-405d-b64d-da1a2a7eca33/MTA-Database-Fundamentals-2018.png" alt="MTA: Database Fundamentals - Certified 2018 badge image. Issued by Microsoft" width="100" height="100">
+								<p>With over ten years of experience in finance, business analysis, BI, data engineering, and data science, I leverage my data skills to provide insights and recommendations that support strategic decision-making and drive business performance. I have expertise in various tools and languages, such as Power BI, Power Query, SSAS, R, DAX, MDX, and SQL, to build self-service and enterprise-scale data solutions. I also have experience in working with different ERP, SaaS, and RDBMS platforms, such as Sage, Microsoft Dynamics, Azure, NetSuite, Teradata, and Oracle. I am passionate about delivering value to my clients and stakeholders by transforming data into actionable insights</p>
+							</header>
+							<a href="" class="image main"><img src="images/p1.jpg" alt="" /></a>
+							<ul class="actions special">
+								<li><a href="https://github.com/md3629/PBI_with_R" class="button large">Check it out</a></li>
+							</ul>
+						</article>
+
+						<!-- Posts -->
+						<section class="posts">
+
+							<article>
+								<header>
+
+									<h2>
+										<a href="#">
+											DAX measures<br />
+											Power BI, Excel
+										</a>
+									</h2>
 								</header>
-								<a href="" class="image main"><img src="images/p1.jpg" alt="" /></a>
+								<a href="#" class="image fit"><img src="images/p3.jpg" alt="" /></a>
+								<p>
+									Calculated measures are the way of defining calculations in a DAX model, which allows us to calculate values based on each row.<br />
+									Here is a "Calculated Rolling Total" to show the balance over time (see Marco Russo & Alberto Ferrari)<br />
+									<br />
+									Trade Amount RT =<br />
+									VAR LastVisibleDate = MAX ( Transactions[Date] )<br />
+									VAR FirstVisibleDate = MIN ( Transactions[Date] )<br />
+									VAR LastDateWithSales =<br />
+									CALCULATE (<br />
+									MAX ( Transactions[Date] ),
+									ALL ( Transactions ) <br />
+									)<br />
+									VAR Result = IF (<br />
+									FirstVisibleDate <= LastDateWithSales,
+									CALCULATE ( [Total Net Amount], Calendar_Transactions[Date] <= LastVisibleDate )<br />
+									)<br />
+									RETURN<br />
+									Result <br />
+
+								</p>
+
+							</article>
+
+							<article>
+								<header>
+
+									<h2><a href="#">Financial Modelling in Excel Power Query</h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/FinModel.JPG" alt="" /></a>
+								<p>With Power Query (known as Get & Transform in Excel), you can import or connect to external data, and then shape that data, for example remove a column, change a data type, or merge tables, in ways that meet your needs. Then, you can load your query into Excel, create measure in DAX and create charts and reports. Periodically, you can refresh the data to make it up to date. Here’s a Financial model with a P&L, B/S and cash flow.</p>
+								<ul class="actions special">
+									<li><a href="https://amzn.eu/d/ajkEh1A" class="button large">For PoC in PBI - Check it out</a></li>
+								</ul>
+								<ul class="actions special">
+									<li><a href="https://github.com/md3629/FinancialModel_PQ.git" class="button large">For PoC in Excel - Check it out</a></li>
+								</ul>
+							</article>
+							<article>
+								<header>
+
+									<h2><a href="#">Excel Power Query</h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/PQ.JPG" alt="" /></a>
+								<p>With Power Query (known as Get & Transform in Excel), you can import or connect to external data, and then shape that data, for example remove a column, change a data type, or merge tables, in ways that meet your needs. Then, you can load your query into Excel to create charts and reports. Periodically, you can refresh the data to make it up to date.</p>
+								<ul class="actions special">
+									<li><a href="https://powerquery.microsoft.com/en-us/excel/" class="button large">Check it out</a></li>
+								</ul>
+							</article>
+
+							<article>
+
+								<header>
+
+									<h2>
+										<a href="#">
+											Anomaly detection<br />
+											Power BI
+										</a>
+									</h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/p4.jpg" alt="" /></a>
+								<p>Anomaly detection helps us enhance our line charts by automatically detecting anomalies in your time series data. It also provides explanations for the anomalies to help with root cause analysis.</p>
+
+							</article>
+							<article>
+								<header>
+
+									<h2>
+										<a href="#">
+											M language<br />
+											Power BI, Excel Power Query
+										</a>
+									</h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/M_language.jpg" alt="" /></a>
+								<p>
+									M is a functional, case-sensitive mashup language designed for data transformation.<br />
+									Here is an example of data cleaning and transformation for handling analysis of sales orders.
+								</p>
+
+							</article>
+							<article>
+								<header>
+
+									<h2><a href="#">Excel CUBE-Functions and MDX UniqueNames</h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/MDX.JPG" alt="" /></a>
+								<p>Excel Cube Functions, that allow us to pull data into a worksheet using functions like other Excel functions, can be placed anywhere and preserve a standard Excel report. When we are using Power Pivot in Excel, we can build an MDX query using CUBE functions..</p>
+								<ul class="actions special">
+									<li><a href="https://youtu.be/ExRR0UAhOMM?si=oR1LqiiW5huyjSxR" class="button large">Check it out</a></li>
+								</ul>
+							</article>
+							<article>
+								<header>
+
+									<h2>
+										<a href="#">
+											Sales Orders analysis<br />
+											DAX, M
+										</a>
+									</h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/SO.jpg" alt="" /></a>
+								<p>An order is considered open when it has been placed but has not yet been delivered or invoiced. We are interested here in counting how many orders are open at a certain date, and what their value is.</p>
+								<ul class="actions special">
+									<li><a href="https://www.daxpatterns.com/events-in-progress/" class="button large">Check it out</a></li>
+								</ul>
+							</article>
+							<article>
+								<header>
+
+									<h2>
+										<a href="#">
+											Sales Orders analysis<br />
+											Backlog days
+										</a>
+									</h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/AvDays.jpg" alt="" /></a>
+								<p>Long-term sales orders have a duration that typically spans multiple years, which means that we cannot simply compare the sales order amount and the total amount invoiced so far. A visual created in Excel Power Query based on M language and DAX measures can solve this complex problem.</p>
+
+							</article>
+
+							<article>
+								<header>
+
+									<h2>
+										<a href="#">
+											Web Scraping by using a function in M<br />
+											Var 1 - M language
+										</a>
+									</h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/webscraping.JPG" alt="" /></a>
+								<p>Web scraping is an automatic method to obtain large amounts of data from websites. Most of this data is unstructured data in an HTML format which is then converted into structured data in a spreadsheet or a database so that it can be used in various applications. There are many different ways to perform web scraping to obtain data from websites. Here is an example in M where data is a table and we wanted to load multiple pages by using a function </p>
+								<ul class="actions special">
+									<li><a href="https://github.com/md3629/web-scraping.git" class="button large">Check it out</a></li>
+								</ul>
+							</article>
+							<article>
+								<header>
+
+									<h2>
+										<a href="#">
+											Using R in Inventory Management and Demand Forecasting<br />
+											var 1
+										</a>
+									</h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/rplot.png" alt="" /></a>
+								<p>
+									With R, we can build end-to-end supply chain monitoring processes to identify potential issues and run scenario testing.
+								</p>
+								<ul class="actions special">
+									<li><a href="https://rdrr.io/cran/planr/man/" class="button large">Check it out</a></li>
+								</ul>
+							</article>
+
+							<article>
+								<header>
+
+									<h2>
+										<a href="#">
+											Using DAX in Inventory Management and Demand Forecasting<br />
+											var 2
+										</a>
+									</h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/InvAnalysis.JPG" alt="" /></a>
+								<p>
+									With DAX, we can build visuals to identify potential issues and run scenario testing for Inventory Management.
+								</p>
+								<ul class="actions special">
+									<li><a href="https://amzn.eu/d/2N5qaDF" class="button large">Check it out</a></li>
+								</ul>
+							</article>
+
+
+							<article>
+								<header>
+
+									<h2>
+										<a href="#">
+											Using DAX in Inventory Management<br />
+											Inventory Days by product
+										</a>
+									</h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/InvDays.JPG" alt="" /></a>
+								<p>
+									Days in inventory is the average time a company keeps its inventory before it is sold. Here's an example with Days Inventory at product level and its average. This ratio is usually used in Cash flow analysis and Inventory Management.
+								</p>
+
+							</article>
+							<article>
+								<header>
+
+									<h2>
+										<a href="#">
+											Data Science with R<br />
+											Price Analysis - Extending Power BI with R
+										</a>
+									</h2>
+								</header>
+								<a href="" class="image fit"><img src="images/violin.jpg" alt="" /></a>
+								<p>
+									R is a programming language for statistical computing and graphics. With just a few lines of code we can extend Power BI for more complex visuals and analysis. Here's a visual for price analysis by location.'
+								</p>
 								<ul class="actions special">
 									<li><a href="https://github.com/md3629/PBI_with_R" class="button large">Check it out</a></li>
 								</ul>
 							</article>
+							<article>
+								<header>
 
-						<!-- Posts -->
-							<section class="posts">
+									<h2>
+										<a href="#">
+											Data Science with R<br />
+											Forecasting
+										</a>
+									</h2>
+								</header>
+								<a href="#" class="image fit"><img src="images/forecast.jpg" alt="" /></a>
+								<p>
+									R is a programming language for statistical computing and graphics. With just a few lines of code we can create a forecast based on dedicated libraries. Here's the forecast of weekly prices showing its point forecast and prediction intervals.'
+								</p>
+								<ul class="actions special">
+									<li><a href="https://github.com/md3629/PBI_with_R" class="button large">Check it out</a></li>
+								</ul>
+							</article>
+						</section>
 
-								<article>
-									<header>
-
-										<h2>
-											<a href="#">
-												DAX measures<br />
-												Power BI, Excel
-											</a>
-										</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/p3.jpg" alt="" /></a>
-									<p>
-										Calculated measures are the way of defining calculations in a DAX model, which allows us to calculate values based on each row.<br />
-										Here is a "Calculated Rolling Total" to show the balance over time (see Marco Russo & Alberto Ferrari)<br />
-										<br />
-										Trade Amount RT =<br />
-										VAR LastVisibleDate = MAX ( Transactions[Date] )<br />
-										VAR FirstVisibleDate = MIN ( Transactions[Date] )<br />
-										VAR LastDateWithSales =<br />
-										CALCULATE (<br />
-										MAX ( Transactions[Date] ),
-										ALL ( Transactions ) <br />
-										)<br />
-										VAR Result = IF (<br />
-										FirstVisibleDate <= LastDateWithSales,
-										CALCULATE ( [Total Net Amount], Calendar_Transactions[Date] <= LastVisibleDate )<br />
-										)<br />
-										RETURN<br />
-										Result <br />
-
-									</p>
-
-								</article>
-
-								<article>
-									<header>
-
-										<h2><a href="#">Financial Modelling in Excel Power Query</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/FinModel.JPG" alt="" /></a>
-									<p>With Power Query (known as Get & Transform in Excel), you can import or connect to external data, and then shape that data, for example remove a column, change a data type, or merge tables, in ways that meet your needs. Then, you can load your query into Excel, create measure in DAX and create charts and reports. Periodically, you can refresh the data to make it up to date. Here’s a Financial model with a P&L, B/S and cash flow.</p>
-									<ul class="actions special">
-										<li><a href="https://amzn.eu/d/ajkEh1A" class="button large">For PoC in PBI - Check it out</a></li>
-									</ul>
-									<ul class="actions special">
-										<li><a href="https://github.com/md3629/FinancialModel_PQ.git" class="button large">For PoC in Excel - Check it out</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-
-										<h2><a href="#">Excel Power Query</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/PQ.JPG" alt="" /></a>
-									<p>With Power Query (known as Get & Transform in Excel), you can import or connect to external data, and then shape that data, for example remove a column, change a data type, or merge tables, in ways that meet your needs. Then, you can load your query into Excel to create charts and reports. Periodically, you can refresh the data to make it up to date.</p>
-									<ul class="actions special">
-										<li><a href="https://powerquery.microsoft.com/en-us/excel/" class="button large">Check it out</a></li>
-									</ul>
-								</article>
-
-								<article>
-
-									<header>
-
-										<h2>
-											<a href="#">
-												Anomaly detection<br />
-												Power BI
-											</a>
-										</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/p4.jpg" alt="" /></a>
-									<p>Anomaly detection helps us enhance our line charts by automatically detecting anomalies in your time series data. It also provides explanations for the anomalies to help with root cause analysis.</p>
-
-								</article>
-								<article>
-									<header>
-
-										<h2>
-											<a href="#">
-												M language<br />
-												Power BI, Excel Power Query
-											</a>
-										</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/M_language.jpg" alt="" /></a>
-									<p>
-										M is a functional, case-sensitive mashup language designed for data transformation.<br />
-										Here is an example of data cleaning and transformation for handling analysis of sales orders.
-									</p>
-
-								</article>
-								<article>
-									<header>
-
-										<h2><a href="#">Excel CUBE-Functions and MDX UniqueNames</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/MDX.JPG" alt="" /></a>
-									<p>Excel Cube Functions, that allow us to pull data into a worksheet using functions like other Excel functions, can be placed anywhere and preserve a standard Excel report. When we are using Power Pivot in Excel, we can build an MDX query using CUBE functions..</p>
-									<ul class="actions special">
-										<li><a href="https://youtu.be/ExRR0UAhOMM?si=oR1LqiiW5huyjSxR" class="button large">Check it out</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-
-										<h2>
-											<a href="#">
-												Sales Orders analysis<br />
-												DAX, M
-											</a>
-										</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/SO.jpg" alt="" /></a>
-									<p>An order is considered open when it has been placed but has not yet been delivered or invoiced. We are interested here in counting how many orders are open at a certain date, and what their value is.</p>
-									<ul class="actions special">
-										<li><a href="https://www.daxpatterns.com/events-in-progress/" class="button large">Check it out</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-
-										<h2>
-											<a href="#">
-												Sales Orders analysis<br />
-												Backlog days
-											</a>
-										</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/AvDays.jpg" alt="" /></a>
-									<p>Long-term sales orders have a duration that typically spans multiple years, which means that we cannot simply compare the sales order amount and the total amount invoiced so far. A visual created in Excel Power Query based on M language and DAX measures can solve this complex problem.</p>
-
-								</article>
-
-								<article>
-									<header>
-
-										<h2>
-											<a href="#">
-												Web Scraping by using a function in M<br />
-												Var 1 - M language
-											</a>
-										</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/webscraping.JPG" alt="" /></a>
-									<p>Web scraping is an automatic method to obtain large amounts of data from websites. Most of this data is unstructured data in an HTML format which is then converted into structured data in a spreadsheet or a database so that it can be used in various applications. There are many different ways to perform web scraping to obtain data from websites. Here is an example in M where data is a table and we wanted to load multiple pages by using a function </p>
-									<ul class="actions special">
-										<li><a href="https://github.com/md3629/web-scraping.git" class="button large">Check it out</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-
-										<h2>
-											<a href="#">
-												Using R in Inventory Management and Demand Forecasting<br />
-												var 1
-											</a>
-										</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/rplot.png" alt="" /></a>
-									<p>
-										With R, we can build end-to-end supply chain monitoring processes to identify potential issues and run scenario testing.
-									</p>
-									<ul class="actions special">
-										<li><a href="https://rdrr.io/cran/planr/man/" class="button large">Check it out</a></li>
-									</ul>
-								</article>
-
-								<article>
-									<header>
-
-										<h2>
-											<a href="#">
-												Using DAX in Inventory Management and Demand Forecasting<br />
-												var 2
-											</a>
-										</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/InvAnalysis.JPG" alt="" /></a>
-									<p>
-										With DAX, we can build visuals to identify potential issues and run scenario testing for Inventory Management.
-									</p>
-									<ul class="actions special">
-										<li><a href="https://amzn.eu/d/2N5qaDF" class="button large">Check it out</a></li>
-									</ul>
-								</article>
-
-
-								<article>
-									<header>
-
-										<h2>
-											<a href="#">
-												Using DAX in Inventory Management<br />
-												Inventory Days by product
-											</a>
-										</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/InvDays.JPG" alt="" /></a>
-									<p>
-										Days in inventory is the average time a company keeps its inventory before it is sold. Here's an example with Days Inventory at product level and its average. This ratio is usually used in Cash flow analysis and Inventory Management.
-									</p>
-
-								</article>
-								<article>
-									<header>
-
-										<h2>
-											<a href="#">
-												Data Science with R<br />
-												Price Analysis - Extending Power BI with R
-											</a>
-										</h2>
-									</header>
-									<a href="" class="image fit"><img src="images/violin.jpg" alt="" /></a>
-									<p>
-										R is a programming language for statistical computing and graphics. With just a few lines of code we can extend Power BI for more complex visuals and analysis. Here's a visual for price analysis by location.'
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/md3629/PBI_with_R" class="button large">Check it out</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-
-										<h2>
-											<a href="#">
-												Data Science with R<br />
-												Forecasting
-											</a>
-										</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/forecast.jpg" alt="" /></a>
-									<p>
-										R is a programming language for statistical computing and graphics. With just a few lines of code we can create a forecast based on dedicated libraries. Here's the forecast of weekly prices showing its point forecast and prediction intervals.'
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/md3629/PBI_with_R" class="button large">Check it out</a></li>
-									</ul>
-								</article>
-							</section>
-
-						<!-- Footer -->
+					<!-- Footer -->
 							<footer>
-								
+								<section>
+									<h2>References</h2><br />
+									<p><a href="https://dax.guide/">DAX guide</a></p>
+									<p><a href="https://learn.microsoft.com/en-us/powerquery-m">Power Query M formula language</a></p>
+									<p><a href="https://amzn.eu/d/cDMtDNC">The Definitive Guide to DAX</a></p>
+									<p><a href="https://amzn.eu/d/cbmb9Zj">Forecasting: principles and practice in R</a></p>
+									<p><a href="https://amzn.eu/d/ji7WCFP">Extending Power BI with Python and R</a></p>
+									<p><a href="https://amzn.eu/d/9DhJhOC">Financial Forecasting, Analysis, and Modelling</a></p>
+									<p><a href="https://amzn.eu/d/fyto2ZT">Financial Modelling in Power BI</a></p>
+									<p><a href="https://amzn.eu/d/6NZRwys">Master Your Data with Power Query in Excel and Power BI</a></p>
+								</section>
 							</footer>
 
 					</div>
@@ -320,7 +330,7 @@
 					<footer id="footer">
 						
 						<section class="split contact">
-							
+
 							<section>
 								<h3>Phone</h3>
 								<p><a href="#">(0044) 07931-732 780</a></p>
@@ -333,7 +343,7 @@
 								<h3>Social</h3>
 								<ul class="icons alt">
 									<li><a href="https://www.linkedin.com/in/md3629"><i class="icon brands alt fa-linkedin"></i><span class="label">LinkedIn</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://github.com/md3629/"><i class="icon brands alt fa-github"></i><span class="label">GitHub</span></a></li>
 								</ul>
 							</section>
 						</section>
